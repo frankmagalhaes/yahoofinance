@@ -12,6 +12,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Sobre o Projeto
 
 O projeto consiste em consultar a variação do preço de um ativo  nos últimos 30 pregões. Com essa consulta, deverá apresentar o percentual de variação de preço de um dia para o outro e o percentual desde o primeiro pregão apresentado.
+Os valores estrão estruturados em vetores, desta forma, o projeto casou a data do pregão (chart.result.timestamp) com o valor de abertura (chart.result.indicators.quote.open) através do indice do vetor.
+
 Para este desafio, iremos utilizar a API do Yahoo Finance https://finance.yahoo.com/.
 
 
@@ -26,26 +28,12 @@ https://query1.finance.yahoo.com/v8/finance/chart/TSLA?period1=1655904600&period
 
 Dados acima foram armazenados numa JSON e utilizado para renderizar os valores da variaçao do ativo na tabela e grafico.
 https://jsonformatter.curiousconcept.com/
+Biblioteca do grafico.
+https://www.chartjs.org/
 
 
+Os valores estrão estruturados em vetores, desta forma, o projeto casou a data do pregão (chart.result.timestamp) com o valor de abertura (chart.result.indicators.quote.open) através do indice do vetor.
 
-### Para iniciar o serviço da API:
-
-```shell script
-> npm run start
-```
-Por Padrao o serviço será iniciado na porta :  
-```js
- http://localhost:9000/contacts
-```
-
-## Tecnologias
-
--  [Angular](https://angular.io/)
--  [TypeScript](https://www.typescriptlang.org/)
--  [JsonServer](https://www.npmjs.com/package/json-server)
--  [BootStrap](https://getbootstrap.com/)
--  
 
 
 ## 📝 Licença
