@@ -44,7 +44,6 @@ Biblioteca do grafico.
 https://www.chartjs.org/
 
 
-Os valores estrão estruturados em vetores, desta forma, o projeto casou a data do pregão (chart.result.timestamp) com o valor de abertura (chart.result.indicators.quote.open) através do indice do vetor.
 
 
 
