@@ -1,0 +1,52 @@
+<header>
+  <div>
+    <span [innerHTML]="'Test List and Chart'"></span>
+  </div>
+</header>
+<ng-container>
+  <div class="container">
+
+    <div class="content">
+      <span class="title">Data List</span>
+      <table class="table  table-bordered , table-striped">
+
+        <thead>
+          <tr>
+            <th scope="col">Dia</th>
+            <th scope="col">Data</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Variaçao em relaçao a D-1</th>
+            <th scope="col">Variação em relação a primeira data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let open of dataOpen; index as i;">
+            <tr>
+                <th scope="row" [innerHTML]="[i+1]"></th>
+                <td [innerHTML]="dataTime[i]"></td>
+                <td [innerHTML]="getTransform(dataOpen[i]) "></td>
+                <ng-container *ngIf="dataResult[i] === 'NaN'; then showTdNanTrue; else showTdNanFalse">
+                </ng-container>
+                <ng-template #showTdNanTrue>
+                  <td></td>
+                </ng-template>
+                <ng-template #showTdNanFalse>
+                  <td [innerHTML]="dataResult[i] + '%'"></td>
+                </ng-template>
+                <td [innerHTML]="dataDay[i] + '%'"></td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+    <div class="grafic">
+      <span class="title">Data Chart</span>
+      <canvas #myCanvas></canvas>
+    </div>
+
+  </div>
+</ng-container>
+
+<footer>
+  <span>© 2022 Copyright.</span>
+</footer>
