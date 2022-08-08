@@ -1,7 +1,7 @@
-# CrudAngular
+# List and Chart Yahoo Finance
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
-
+## Preview:
 <p align="center">
   <img alt="Layout da aplicação" width="70%" src="https://github.com/frankmagalhaes/yahoofinance/blob/master/src/assets/prototype/prototype.jpg" />
 </p>
@@ -16,18 +16,30 @@ Os valores estrão estruturados em vetores, desta forma, o projeto casou a data 
 
 Para este desafio, iremos utilizar a API do Yahoo Finance https://finance.yahoo.com/.
 
+Para acesso do projeto final : https://frankmagalhaes.github.io/yahoofinance/
 
+## Como instalar
+
+- Baixe ou clone este repositório usando `git clone https://github.com/frankmagalhaes/yahoofinance.git`;
+- Dentro do diretório, instale as dependências usando `npm install`.
+
+## Como executar
+
+Execute `ng serve` para executar a versão de desenvolvimento. Depois acesse `http://localhost:4200/`.
 
 
 ### Notas
 https://futurofinanceiro.org/127/onde-posso-encontrar-a-documentacao-da-api-do-yahoo-finance
 Coletando algumas evidências temos a informaçao sobre a API do Yahoo Finance ser descontinuada, porém continua funcional.Sendo possível o acesso dos dados:
+ex:
 https://query2.finance.yahoo.com/v8/finance/chart/PETR4.SA.
+
 No projeto atual coletei os dados do histórico intraday do periodo de 22/06/2022 a 03/08/2022 do ativo TSLA.
 https://query1.finance.yahoo.com/v8/finance/chart/TSLA?period1=1655904600&period2=1659619800&interval=1d
 
 Dados acima foram armazenados numa JSON e utilizado para renderizar os valores da variaçao do ativo na tabela e grafico.
 https://jsonformatter.curiousconcept.com/
+
 Biblioteca do grafico.
 https://www.chartjs.org/
 
