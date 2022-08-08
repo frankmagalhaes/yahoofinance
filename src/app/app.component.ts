@@ -8,14 +8,14 @@ import { Chart } from 'chart.js'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'test-app';
+
 
   public dataOpen: any = [];
   public dataTime: any = [];
   public dataResult: any = [];
   public dataDay: any = [];
   @ViewChild("myCanvas", { static: true }) elemento!: ElementRef;
- 
+
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
@@ -51,18 +51,16 @@ export class AppComponent implements OnInit {
         data.chart.result.forEach((a: any) => {
           a.indicators.quote.forEach((b: any, i: any) => {
             this.dataOpen = b.open;
-            this.getCalc(a, b);
             a.timestamp.forEach((c: any) => {
               this.dataTime.push(this.getDate(c));
             })
             b.open.forEach((d: any, i: any) => {
-              this.dataResult.push(this.getCalc(b.open[i-1], b.open[i]))
+              this.dataResult.push(this.getCalc(b.open[i - 1], b.open[i]))
             })
             b.open.forEach((d: any, i: any) => {
               this.dataDay.push(this.getCalc(b.open[0], b.open[i]))
             })
             this.getGrafic();
-
           })
         });
       }

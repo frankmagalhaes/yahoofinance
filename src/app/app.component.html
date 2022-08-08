@@ -28,7 +28,7 @@
                 <ng-container *ngIf="dataResult[i] === 'NaN'; then showTdNanTrue; else showTdNanFalse">
                 </ng-container>
                 <ng-template #showTdNanTrue>
-                  <td></td>
+                  <td> - </td>
                 </ng-template>
                 <ng-template #showTdNanFalse>
                   <td [innerHTML]="dataResult[i] + '%'"></td>
