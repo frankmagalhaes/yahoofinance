@@ -20,7 +20,7 @@
           </tr>
         </thead>
         <tbody>
-          <ng-container *ngFor="let open of dataOpen; index as i;">
+          <ng-container *ngFor="let open of dataOpen |slice:1:31; index as i;">
             <tr>
                 <th scope="row" [innerHTML]="[i+1]"></th>
                 <td [innerHTML]="dataTime[i]"></td>
